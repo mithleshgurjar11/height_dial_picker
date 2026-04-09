@@ -1,3 +1,11 @@
-## 0.0.1
+## 0.0.2
 
-* TODO: Describe initial release.
+### 🔧 Improvements
+
+- 📝 Added Dart documentation comments
+- 📄 Fixed license issue
+- ⚡ Improved performance
+
+### ✨ Enhancements
+
+- 🎯 Better customization support

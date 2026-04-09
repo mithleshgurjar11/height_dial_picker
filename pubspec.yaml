@@ -1,6 +1,6 @@
 name: height_dial_picker
 description: A customizable height dial picker widget for Flutter with ft/cm support and smooth interaction.
-version: 0.0.1
+version: 0.0.2
 
 homepage: https://github.com/mithleshgurjar11/height_dial_picker
 repository: https://github.com/mithleshgurjar11/height_dial_picker

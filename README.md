@@ -49,3 +49,6 @@ Add this to your `pubspec.yaml`:
 ```yaml
 dependencies:
   height_dial_picker: ^0.0.1
+
+## pub.dev
+https://pub.dev/packages/height_dial_picker

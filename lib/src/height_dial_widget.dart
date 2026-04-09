@@ -2,24 +2,55 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:height_dial_picker/src/dial_painter.dart';
 
+/// A customizable height picker widget with a dial-based UI.
+///
+/// This widget allows users to select height using a smooth horizontal drag.
+/// It supports both feet (ft) and centimeters (cm) units and provides full UI customization.
 class HeightDialPicker extends StatefulWidget {
+
+  /// Minimum selectable height (default: 4 ft)
   final double minHeight;
+
+  /// Maximum selectable height (default: 9 ft)
   final double maxHeight;
+
+  /// Initial unit of measurement ('ft' or 'cm')
   final String initialUnit;
 
+  /// Background color of the widget
   final Color backgroundColor;
+
+  /// Selected toggle button color
   final Color selectedColor;
+
+  /// Unselected toggle button color
   final Color unselectedColor;
+
+  /// Main text color (height + unit)
   final Color textColor;
+
+  /// Default tick color (not used directly but available for customization)
   final Color tickColor;
+
+  /// Color of small ticks
   final Color smallTickColor;
+
+  /// Color of big ticks
   final Color bigTickColor;
+
+  /// Color of big ticks
   final Color centerLineColor;
+
+  /// Color of selected tick indicator
   final Color selectedTickColor;
+
+  /// Color of bottom label text (numbers)
   final Color labelTextColor;
 
+  /// Callback triggered when height value changes
   final Function(double value, String unit) onChanged;
 
+  /// Creates a [HeightDialPicker] widget.
   const HeightDialPicker({
     super.key,
     this.minHeight = 4,
@@ -29,8 +60,6 @@ class HeightDialPicker extends StatefulWidget {
     this.selectedColor = const Color(0xFF5D9AFF),
     this.unselectedColor = Colors.white,
     this.textColor = Colors.white,
-
-    // 👉 NEW COLORS
     this.tickColor = const Color(0xFFBDBDBD),
     this.smallTickColor = const Color(0xFFBDBDBD),
     this.bigTickColor = const Color(0xFFBDBDBD),
@@ -44,9 +73,13 @@ class HeightDialPicker extends StatefulWidget {
   @override
   State<HeightDialPicker> createState() => _HeightDialPickerState();
 }
-
+/// State class for [HeightDialPicker]
 class _HeightDialPickerState extends State<HeightDialPicker> {
+
+  /// Current rotation angle of the dial
   double angle = 0;
+
+  /// Currently selected unit (ft/cm)
   late String selectedUnit;
 
   @override
@@ -55,6 +88,7 @@ class _HeightDialPickerState extends State<HeightDialPicker> {
     super.initState();
   }
 
+  /// Calculates the currently selected height based on dial position
   String get selectedHeight {
     final progress = angle / pi;
     final totalInches = widget.minHeight * 12 +
@@ -71,6 +105,7 @@ class _HeightDialPickerState extends State<HeightDialPicker> {
     }
   }
 
+  /// Handles drag gesture and updates dial angle
   void _onPanUpdate(DragUpdateDetails details) {
     setState(() {
       angle += details.delta.dx * 0.01;
@@ -102,6 +137,7 @@ class _HeightDialPickerState extends State<HeightDialPicker> {
           _buildUnitToggle(),
           const SizedBox(height: 20),
 
+          /// Selected height display
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -127,6 +163,7 @@ class _HeightDialPickerState extends State<HeightDialPicker> {
 
           const SizedBox(height: 20),
 
+          /// Dial painter widget
           GestureDetector(
             onPanUpdate: _onPanUpdate,
             child: CustomPaint(
@@ -149,6 +186,7 @@ class _HeightDialPickerState extends State<HeightDialPicker> {
     );
   }
 
+  /// Builds the unit toggle (ft/cm)
   Widget _buildUnitToggle() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
