@@ -1,39 +1,51 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Height Dial Picker
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mithleshgurjar11/height_dial_picker/main/assets/preview.gif" width="320"/>
+</p>
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+<p align="center">
+  <a href="https://pub.dev/packages/height_dial_picker">
+    <img src="https://img.shields.io/pub/v/height_dial_picker?color=blue&label=pub.dev" alt="Pub Version"/>
+  </a>
+  <a href="https://github.com/mithleshgurjar11/height_dial_picker/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/mithleshgurjar11/height_dial_picker" alt="License"/>
+  </a>
+  <a href="https://github.com/mithleshgurjar11/height_dial_picker/stargazers">
+    <img src="https://img.shields.io/github/stars/mithleshgurjar11/height_dial_picker?style=social" alt="Stars"/>
+  </a>
+</p>
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+<p align="center">
+  A beautiful and customizable height picker widget for Flutter with smooth dial interaction and ft/cm support.
+</p>
 
-## Features
+---
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+## ✨ Features
 
-## Getting started
+- 📏 Smooth dial-based height selection
+- 🔄 ft / cm unit toggle
+- 🎨 Fully customizable UI (colors, range)
+- ⚡ Lightweight & no extra dependencies
+- 📱 Easy to integrate in any Flutter app
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+---
 
-## Usage
+## 🖼 Screenshots
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mithleshgurjar11/height_dial_picker/main/assets/screenshot1.png" width="220"/>
+  &nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/mithleshgurjar11/height_dial_picker/main/assets/screenshot2.png" width="220"/>
+</p>
 
-```dart
-const like = 'sample';
-```
+---
 
-## Additional information
+## 📦 Installation
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Add this to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  height_dial_picker: ^0.0.1
